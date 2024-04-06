@@ -13,8 +13,18 @@ void main() {
           Center(
             child: Column(
               children: [
-                SizedBox(height: 10),
-                Container(height: 100, width: 200, color: Colors.deepOrange),
+                SizedBox(height: 100),
+                Container(height: 100, width: 200,
+                decoration: BoxDecoration(
+                  color: Colors.deepOrange,
+                  border: Border.all(color: Colors.black, width: 5),
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                alignment: Alignment.center,
+                child: const Text(
+                  "Welcome" ,
+                  style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold,fontSize: 40)
+                )),
                 SizedBox(height: 100)
               ],
             )
