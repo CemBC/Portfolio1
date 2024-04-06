@@ -7,22 +7,55 @@ void main() {
       style: TextStyle(
         color: Colors.white
       ))),
-      body: Center(
+
+      body:Stack(
+      children: [
+          Center(
+            child: Column(
+              children: [
+                SizedBox(height: 10),
+                Container(height: 100, width: 200, color: Colors.deepOrange),
+                SizedBox(height: 100)
+              ],
+            )
+          )
+        ,
+      Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children : [
-            Container(width: 100, height: 100, color: Colors.black),
+            Container(width: 100, height: 100, color: Colors.black ,
+            alignment: Alignment.bottomRight,
+            child: const Text(
+              "TAMK" ,
+                style: TextStyle(
+                    color: Colors.white,
+                fontWeight: FontWeight.bold)
+            )),
               SizedBox(width: 40),
-            Container(width: 100, height: 200, color: Colors.black54),
+            Container(width: 100, height: 200, color: Colors.black54,
+                child: Center(
+                  child: const Text("Flutter!" ,
+                  style: TextStyle(color: Colors.white,
+                  fontWeight: FontWeight.bold))
+                )),
               SizedBox(width: 40),
-            Container(width: 100, height:  100 , color: Colors.grey),
+            Container(width: 100, height:  100 , color: Colors.grey,
+            alignment: Alignment.bottomLeft,
+             child: const Text(
+               "THWS",
+               style: TextStyle(
+                 color: Colors.white,
+                 fontWeight: FontWeight.bold)
+             ) ),
         ],
-      ))
+      )
 
-
+      )
+        ],
     )
-  ));
+  )));
 }
 
 
