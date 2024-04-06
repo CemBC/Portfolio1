@@ -25,7 +25,15 @@ void main() {
                   "Welcome" ,
                   style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold,fontSize: 40)
                 )),
-                SizedBox(height: 100)
+                SizedBox(height: 375),
+                Container(width: 300 , height: 200,
+                  decoration: BoxDecoration(
+                    border: Border.all( color: Colors.grey ,
+                    width : 5)
+                  ),
+                    child: Image.asset("assets/images/thwsLogo.png",
+                    fit: BoxFit.contain)
+                )
               ],
             )
           )
