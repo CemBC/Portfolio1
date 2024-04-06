@@ -19,19 +19,21 @@ void main() {
                             border: Border.all(color: Colors.black, width: 5),
                             borderRadius: BorderRadius.circular(20),
                           ),
-                          alignment: Alignment.center,
-                          child: const Text(
+                          child: const FittedBox(
+                            child: const Text(
                               "Welcome" ,
-                              style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold,fontSize: 40)
-                          )),
+                              textDirection: TextDirection.ltr,
+                              style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold)
+                          ))),
                       SizedBox(height: 400),
-                      Container(width: 300 , height: 200,
+                      Container(width: 300, height: 200,
                           decoration: BoxDecoration(
                               border: Border.all( color: Colors.grey ,
                                   width : 2)
                           ),
-                          child: Image.asset("assets/images/thwsLogo.png",
-                              fit: BoxFit.contain)
+                            child: FittedBox(
+                              child: Image.asset("assets/images/thwsLogo.png" , fit: BoxFit.contain)
+                            )
                       )
                     ],
                   )
@@ -42,6 +44,7 @@ void main() {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children : [
+
                       Container(width: 100, height: 100, color: Colors.black ,
                           alignment: Alignment.bottomRight,
                           child: const Text(
