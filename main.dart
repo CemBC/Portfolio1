@@ -25,7 +25,7 @@ void main() {
                               textDirection: TextDirection.ltr,
                               style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold)
                           ))),
-                      SizedBox(height: 400),
+                      Expanded(child: SizedBox()),
                       Container(width: 300, height: 200,
                           decoration: BoxDecoration(
                               border: Border.all( color: Colors.grey ,
@@ -34,7 +34,8 @@ void main() {
                             child: FittedBox(
                               child: Image.asset("assets/images/thwsLogo.png" , fit: BoxFit.contain)
                             )
-                      )
+                      ),
+                      SizedBox(height: 30)
                     ],
                   )
               )
@@ -44,7 +45,6 @@ void main() {
                     mainAxisAlignment: MainAxisAlignment.center,
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children : [
-
                       Container(width: 100, height: 100, color: Colors.black ,
                           alignment: Alignment.bottomRight,
                           child: const Text(
